@@ -1,0 +1,27 @@
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+contact:
+    resource: "@ContactBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+blog:
+    resource: "@BlogBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+index:
+    resource: "@IndexBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_user_security:
+   resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+   prefix:   /admin

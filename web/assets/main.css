@@ -1,0 +1,55 @@
+body {
+    padding-top: 70px !important;
+}
+
+.navbar {
+    background-color: #20204D;
+    padding: 15px !important;
+
+}
+
+.nav-link {
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #DF6036 !important;
+}
+
+.custom-icons {
+    color: white;
+    margin-right: 20px;
+}
+
+.custom-icon {
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 1.1em !important;
+    padding: 3px;
+}
+
+/* index */
+.index-image {
+    background-image: url("./images/new-york-438391_1920.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.index-text {
+    font-size: 3em;
+    color: white;
+    font-weight: 700;
+}
+
+.index-text1 {
+    font-size: 2em;
+    color: white;
+    font-weight: 700;
+}
+
+.custom-back-row {
+    min-height: 30vh;
+}
+/* index */
