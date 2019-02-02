@@ -170,15 +170,6 @@ hr{
     min-height: 175px;
 }
 
-.bg-contact{
-    background-image: url("./images/bg4.jpg");
-    background-position: right;
-    background-size: cover;
-}
-
-label {
-    font-weight: 500;
-}
 /* index */
 
 

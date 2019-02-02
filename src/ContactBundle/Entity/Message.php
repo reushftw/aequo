@@ -3,6 +3,7 @@
 namespace ContactBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Message
@@ -24,12 +25,24 @@ class Message
     /**
      * @var string
      *
+     * @Assert\NotBlank()
+     * @Assert\Regex(
+     *     pattern="/^[a-zA-Z]*$/",
+     *     message="Invalid",
+     *     )
+     *
      * @ORM\Column(name="LastName", type="string", length=255)
      */
     private $lastName;
 
     /**
      * @var string
+     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(
+     *     pattern="/^[a-zA-Z]*$/",
+     *     message="Invalid",
+     *     )
      *
      * @ORM\Column(name="FirstName", type="string", length=255)
      */
@@ -38,6 +51,25 @@ class Message
     /**
      * @var string
      *
+     * @Assert\NotBlank()
+     * @Assert\Regex(
+     *     pattern="/^[a-zA-Z]*$/",
+     *     message="Invalid",
+     * )
+     *
+     * @ORM\Column(name="fonction", type="string", length=255)
+     */
+    private $fonction;
+
+    /**
+     * @var string
+     *
+     *
+     * @Assert\Email(
+     *     message = "'{{ value }}' is not a valid email.",
+     *     checkMX = true,
+     * )
+     *
      * @ORM\Column(name="email", type="string", length=255)
      */
     private $email;
@@ -45,12 +77,19 @@ class Message
     /**
      * @var string
      *
+     * * @Assert\Regex(
+     *     pattern="/\d{8}/",
+     *     htmlPattern="/\d{8}/",
+     *     message="Invalid",
+     * )
+     *
      * @ORM\Column(name="phone", type="string", length=255)
      */
     private $phone;
 
     /**
      * @var string
+     *
      *
      * @ORM\Column(name="message", type="text")
      */
@@ -206,6 +245,22 @@ class Message
     public function setEnabled($enabled)
     {
         $this->enabled = $enabled;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFonction()
+    {
+        return $this->fonction;
+    }
+
+    /**
+     * @param string $fonction
+     */
+    public function setFonction($fonction)
+    {
+        $this->fonction = $fonction;
     }
 }
 
