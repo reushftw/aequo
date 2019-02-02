@@ -15,7 +15,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        $blog_list = $this->getDoctrine()->getManager()->getRepository(BlogPost::class)->findAll();
+        $blog_list = $this->getDoctrine()->getManager()->getRepository(BlogPost::class)->findBy(array('enabled'=> true));
         return $this->render('BlogBundle::listAllBlogs.html.twig', array(
             'blog_list' => $blog_list,
         ));
@@ -28,7 +28,7 @@ class DefaultController extends Controller
     {
         $blog = $this->getDoctrine()->getManager()->getRepository(BlogPost::class)->find($id);
 
-        return $this->render('@Blog/addBlog.html.twig', array(
+        return $this->render('@Blog/view.html.twig', array(
             'blog' => $blog,
         ));
     }
@@ -39,6 +39,7 @@ class DefaultController extends Controller
     public function addAction(Request $request)
     {
         $blog = new BlogPost();
+        $blog->setEnabled(true);
         $form = $this->get('form.factory')->create(BlogPostType::class, $blog);
 
         if($request->isMethod('POST') && $form->handleRequest($request)->isValid())
@@ -61,7 +62,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $blog = $em->getRepository(BlogPost::class)->find($id);
-        $form = $this->createView(BlogPostType::class,$blog);
+        $form = $this->get('form.factory')->create(BlogPostType::class,$blog);
         if($request->isMethod('POST') && $form->handleRequest($request)->isValid())
         {
             $em->flush();
@@ -79,7 +80,7 @@ class DefaultController extends Controller
     public function toggleBlog($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $blog = $em->getRepository()->find($id);
+        $blog = $em->getRepository(BlogPost::class)->find($id);
         if($blog->isEnabled())
         {
             $blog->setEnabled(false);
@@ -88,6 +89,7 @@ class DefaultController extends Controller
             $blog->setEnabled(true);
         }
         $em->flush();
+        return $this->redirectToRoute('index_blog_page');
     }
 
     /**
@@ -96,8 +98,9 @@ class DefaultController extends Controller
     public function deleteBlog($id)
     {
         $em = $this->getDoctrine()->getManager();
-        $blog = $em->getRepository()->find($id);
+        $blog = $em->getRepository(BlogPost::class)->find($id);
         $blog->setEnabled(false);
         $em->flush();
+        return $this->redirectToRoute('index_blog_page');
     }
 }

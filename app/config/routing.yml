@@ -1,17 +1,17 @@
 user:
     resource: "@UserBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /admin
 
 contact:
     resource: "@ContactBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /admin
 
 blog:
     resource: "@BlogBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /admin
 
 index:
     resource: "@IndexBundle/Controller/"
