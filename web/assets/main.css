@@ -2,6 +2,14 @@ body {
     padding-top: 70px !important;
 }
 
+body, html{
+    width: 100%;
+    height: 100%;
+    margin:0px;
+    padding:0px;
+    overflow-x:hidden;
+}
+
 .nav-item-button {
     border: 2px solid white;
     border-radius: 20px;
@@ -21,7 +29,6 @@ body {
 .navbar {
     background-color: #20204D;
     padding: 15px !important;
-
 }
 
 .nav-link {
@@ -58,6 +65,12 @@ body {
     clip-path: polygon(50% 0%, 100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
 }
 
+@media only screen and (max-width: 1024px) {
+    .index-image {
+        height: 70vh !important;
+    }
+}
+
 .index-text {
     font-size: 3em;
     color: white   ;
@@ -91,36 +104,72 @@ body {
     text-align: center;
     color: #20204D;
     font-weight: 700;
-    font-size: ;
+    padding: 50px;
 }
+
+.text-tag-card-footer{
+    background-color:#e16a43 ;
+    color : white;
+    font-weight: 500;
+    font-size: 17px;
+    padding:7px;
+    border-radius: 20px;
+
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.btn-see-all{
+    background-color:#20204D !important;
+    color: white !important;
+    border-radius:40px !important;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    padding: 10px 40px 10px 40px !important;
+}
+.btn-see-all:hover{
+    background-color:#e16a43 !important;
+}
+
+.img-border{
+    border: 8px solid grey;
+    border-radius: 40px;
+    height: 150px;
+    width: 150px;
+    margin-bottom: 15px;
+    padding: 15px;
+    margin-top:30px;
+}
+.img-border:hover{
+    border-color: #e16a43;
+}
+hr{
+    background-color: #20204D;
+    height: 2px !important;
+    width: 200px;
+}
+.bg-color{
+    background-color:#F2F2F2;
+    margin-top: 30px;
+}
+
+.card{
+    min-height: 470px;
+}
+
+.card-img-top{
+    min-height: 175px;
+}
+
 /* index */
 
-.innerImage{
-    background-size:cover;
-    background-position:50%;
-    background-repeat:no-repeat;}
 
-.zoom .image img {
-    visibility:hidden;}
-.zoom .innerImage{
-    overflow:hidden;position:relative;
-    -webkit-transition:transform 0.4s ease-in-out 0s;
-    -moz-transition:transform 0.4s ease-in-out 0s;
-    -ms-transition:transform 0.4s ease-in-out 0s;
-    -o-transition:transform 0.4s ease-in-out 0s;
-    transition:transform 0.4s ease-in-out 0s;
-    -webkit-transform:scale(1);-moz-transform:scale(1);
-    -ms-transform:scale(1);
-    -o-transform:scale(1);
-    transform:scale(1);
-}
-
-.zoom:hover .innerImage{
-    -webkit-transform:scale(1.1);
-    -moz-transform:scale(1.1);
-    -ms-transform:scale(1.1);
-    -o-transform:scale(1.1);
-    transform:scale(1.1);}
 
 
 
