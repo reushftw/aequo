@@ -104,6 +104,7 @@ body, html{
     text-align: center;
     color: #20204D;
     font-weight: 700;
+<<<<<<< HEAD
     padding: 50px;
 }
 
@@ -153,6 +154,8 @@ hr{
     background-color: #20204D;
     height: 2px !important;
     width: 200px;
+=======
+>>>>>>> fb5ed9f93ef230fd5339e32eae6774ecd2958916
 }
 .bg-color{
     background-color:#F2F2F2;

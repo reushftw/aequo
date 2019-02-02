@@ -1,0 +1,95 @@
+{% extends 'admin/base.html.twig' %}
+
+{% block title %}{{ parent() }} - List Blog Posts {% endblock %}
+
+{% block body %}
+
+    {{ parent() }}
+
+    <!-- Main content -->
+    <div class="content-wrapper">
+        <!-- Page header -->
+        <div class="page-header">
+            <div class="page-header-content">
+                <div class="page-title">
+                    <h4><i class="icon-arrow-left52 position-left"></i> <span class="text-semibold">Blog</span> - List</h4>
+                </div>
+            </div>
+
+            <div class="breadcrumb-line">
+                <ul class="breadcrumb">
+                    <li><a href="{{ path('index_admin_page') }}"><i class="icon-home2 position-left"></i> Home</a></li>
+                    <li class="active">Blog</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /page header -->
+
+        <!-- Content area -->
+        <div class="content">
+
+            <div class="panel panel-flat">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ blog.titleEn }} (en)</h3>
+                    <hr>
+                </div>
+                <div class="panel-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <h4>Display Image</h4>
+                                <img src="{{ vich_uploader_asset(blog, 'imageFile') }}" alt="" style="width: 150px;height: 150px;">
+                            </div>
+                            <div class="col-lg-9">
+                                <h4>Description En</h4>
+                                {{ blog.descriptionEn }}
+                            </div>
+                        </div>
+                        <hr>
+                        <h4>Content En</h4>
+                        <div>
+                            {{ blog.contentEn|raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="panel panel-flat">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ blog.titleFr }} (fr)</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <h4>Display Image</h4>
+                                <img src="{{ vich_uploader_asset(blog, 'imageFile') }}" alt="" style="width: 150px;height: 150px;">
+                            </div>
+                            <div class="col-lg-9">
+                                <h4>Description Fr</h4>
+                                {{ blog.descriptionFr }}
+                            </div>
+                        </div>
+                        <hr>
+                        <h4>Content Fr</h4>
+                        <div>
+                            {{ blog.contentFr|raw }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{ include('admin/footer.html.twig') }}
+
+        </div>
+        <!-- /content area -->
+    </div>
+    <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+    </div>
+    <!-- /page container -->
+
+{% endblock %}

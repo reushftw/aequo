@@ -56,6 +56,11 @@ class Message
      */
     private $message;
 
+    /**
+     * @ORM\Column(type="boolean", length=255, nullable=true)
+     * @var bool
+     */
+    private $enabled;
 
     /**
      * Get id
@@ -185,6 +190,22 @@ class Message
     public function getMessage()
     {
         return $this->message;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isEnabled()
+    {
+        return $this->enabled;
+    }
+
+    /**
+     * @param bool $enabled
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
     }
 }
 
