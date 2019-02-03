@@ -43,6 +43,7 @@ body, html{
 .custom-icons {
     color: white;
     margin-right: 30px;
+
 }
 
 .custom-icon {
@@ -51,6 +52,32 @@ body, html{
     font-size: 1.1em !important;
     padding: 6px;
     margin-right: 8px;
+    color: white ;
+    text-decoration: none;
+}
+
+.link-style{
+    text-decoration: none;
+}
+
+.link-style:hover{
+    text-decoration: none;
+}
+
+.text-card-style{
+    text-decoration: none;
+    color: black;
+}
+
+.text-card-style:hover{
+    text-decoration: none;
+    color: #494b41;
+}
+
+.custom-icon:hover{
+    border: 2px solid #DF6036;
+    background-color: #DF6036 !important;
+    color: #FFFFFF !important;
 }
 
 /* index */
@@ -104,8 +131,7 @@ body, html{
     text-align: center;
     color: #20204D;
     font-weight: 700;
-<<<<<<< HEAD
-    padding: 50px;
+    padding: 30px 0px 30px 0px;
 }
 
 .text-tag-card-footer{
@@ -150,7 +176,7 @@ body, html{
 .img-border:hover{
     border-color: #e16a43;
 }
-hr{
+.hr-style{
     background-color: #20204D;
     height: 2px !important;
     width: 200px;
@@ -179,6 +205,89 @@ hr{
 label {
     font-weight: 500;
 }
+
+#button {
+    display: inline-block;
+    background-color: darkgrey;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#button::after {
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #20204D;
+}
+#button:hover {
+    cursor: pointer;
+    background-color: #20204D;
+}
+#button:active {
+    background-color: #555;
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+.footer-style{
+    background-color: #20204D;
+}
+.copyright-style{
+    color: white;
+    font-weight: 400;
+}
+
+.footer-text{
+    color: white;
+    font-weight: 600;
+}
+
+.zoom {
+    transition: transform .3s; /* Animation */
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.scroll-down i{
+    margin-top: 190px;
+    font-size: 50px;
+    text-decoration: none;
+    color: white;
+}
+.bounce {
+    animation: bounce 2s infinite;
+
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+
+}
+
+
+
+
 /* index */
 
 

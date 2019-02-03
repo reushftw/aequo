@@ -3,6 +3,9 @@
 {% block body %}
     {% include 'default/navbar.html.twig' %}
 
+    <a id="button"><i class="icon-chevron-up"></i></a>
+
+
     <div class="index-image">
         <div class="container">
             <div class="row justify-content-left align-items-end custom-back-row">
@@ -15,11 +18,12 @@
                     "Reach new heights"
                 </div>
             </div>
-            <div class="row justify-content-left align-items-start">
-                <div class="index-text2">
-
-                </div>
+            <div class="row justify-content-center">
+                    <a href="#section04" class="scroll-down"><i class="fa fa-chevron-circle-down bounce"></i></a>
             </div>
+        </div>
+        <div id="section04">
+
         </div>
     </div>
 
@@ -36,16 +40,16 @@
 
     {#level 2#}
     <section style="background-color: #f7f6f7;">
-        <div class="titles">
+        <div class="titles" >
             <h1>Latest News</h1>
         </div>
         <div class="container">
             <div class="card-deck row justify-content-center">
                 <div class="col-lg-4 col-sm-8">
                     <div class="card">
-                        <img class="card-img-top" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                         <div class="card-footer">
@@ -55,9 +59,9 @@
                 </div>
                 <div class="col-lg-4 col-sm-8">
                     <div class="card">
-                        <img class="card-img-top" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
                             <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                         </div>
                         <div class="card-footer">
@@ -67,9 +71,9 @@
                 </div>
                 <div class="col-lg-4 col-sm-8">
                     <div class="card">
-                        <img class="card-img-top" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                         </div>
                         <div class="card-footer">
@@ -82,9 +86,9 @@
             <div class="card-deck row justify-content-center" style="margin-top: 30px">
                 <div class="col-lg-4 col-sm-8">
                     <div class="card">
-                        <img class="card-img-top" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                         <div class="card-footer">
@@ -94,9 +98,9 @@
                 </div>
                 <div class="col-lg-4 col-sm-8">
                     <div class="card">
-                        <img class="card-img-top" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
                             <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
                         </div>
                         <div class="card-footer">
@@ -106,9 +110,9 @@
                 </div>
                 <div class="col-lg-4 col-sm-8">
                     <div class="card">
-                        <img class="card-img-top" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
                         </div>
                         <div class="card-footer">
@@ -140,17 +144,17 @@
         <div class="container">
             <div class="row justify-content-around">
                 <div class="col-lg-4 col-sm-8 text-center">
-                    <img class="img-fluid img-border" src="{{ asset('assets/images/icons/assistance.png') }}" alt="">
-                    <h2>Assistance</h2>
-                    <hr>
+                    <a href=""><img class="img-fluid img-border" src="{{ asset('assets/images/icons/assistance.png') }}" alt=""></a>
+                    <a href="" class="link-style"><h2>Assistance</h2></a>
+                    <hr class="hr-style">
                     <p>
                         On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-8 text-center">
-                    <img class="img-fluid img-border" src="{{ asset('assets/images/icons/audit.png') }}" alt="">
-                    <h2>Audit</h2>
-                    <hr>
+                    <a href="" class="link-style"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/audit.png') }}" alt=""></a>
+                    <a href="" class="link-style"><h2>Audit</h2></a>
+                    <hr class="hr-style">
                     <p>
                         On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
                     </p>
@@ -159,17 +163,17 @@
 
                 <div class="row justify-content-around">
                     <div class="col-lg-4 col-sm-8 text-center">
-                        <img class="img-fluid img-border" src="{{ asset('assets/images/icons/formation.png') }}" alt="">
-                        <h2>Formation</h2>
-                        <hr>
+                        <a href="" class="link-style"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/formation.png') }}" alt=""></a>
+                            <a href="" class="link-style"><h2>Formation</h2></a>
+                        <hr class="hr-style">
                         <p>
                             On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
                         </p>
                     </div>
                     <div class="col-lg-4 col-sm-8 text-center">
-                        <img class="img-fluid img-border" src="{{ asset('assets/images/icons/lab.png') }}" alt="">
-                        <h2>Laboratoire</h2>
-                        <hr>
+                        <a href="" class="link-style"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/lab.png') }}" alt=""></a>
+                        <a href="" class="link-style"><h2>Laboratoire</h2></a>
+                        <hr class="hr-style">
                         <p>
                             On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
                         </p>
@@ -194,7 +198,7 @@
 
 
     {#level 5#}
-    <section style="margin-top: 20px">
+    <section>
             <div class="titles">
                 <h1>Our Partners</h1>
             </div>
@@ -220,7 +224,7 @@
     <section class="bg-contact">
         <div class="container" >
             <div class="row justify-content-center" style="margin-top: 50px;">
-                <div class="titles" style="margin-top: 30px;">
+                <div class="titles">
                     <h1>Any Question?</h1>
                     <h4>Don't hesitate to contact us</h4>
                 </div>
@@ -278,4 +282,5 @@
         </div>
     </section>
 
+{% include'default/footer.html.twig' %}
 {% endblock %}
