@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include 'default/navbar.html.twig' %}
+
+    <section style="background-color: #f7f6f7; padding-bottom: 30px">
+        <div class="titles" >
+            <h1>Latest News</h1>
+        </div>
+        <div class="container">
+            <div class="card-deck row justify-content-center">
+            {% for b in blog %}
+                <div class="col-lg-4 col-sm-8">
+                    <div class="card">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-tag-card-footer">Laboratory</small>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+                <div class="col-lg-4 col-sm-8">
+                    <div class="card">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-tag-card-footer">Press release</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-8">
+                    <div class="card">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-tag-card-footer">IT</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-deck row justify-content-center" style="margin-top: 30px">
+                <div class="col-lg-4 col-sm-8">
+                    <div class="card">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-tag-card-footer">Press release</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-8">
+                    <div class="card">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/mouna1.png') }}" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-tag-card-footer">Laboratory</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-8">
+                    <div class="card">
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-tag-card-footer">IT</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include'default/footer.html.twig' %}
+{% endblock %}

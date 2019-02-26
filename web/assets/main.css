@@ -43,7 +43,23 @@ body, html{
 .custom-icons {
     color: white;
     margin-right: 30px;
+}
 
+.custom-icons1 {
+    color: white;
+    padding-bottom: 50px;
+}
+
+.title-aequo {
+    font-size: 52px;
+    line-height: 20px;
+    font-weight: 200;
+}
+
+.desc-color{
+    color: darkblue;
+    font-weight: 500;
+    font-size: medium;
 }
 
 .custom-icon {
@@ -53,6 +69,15 @@ body, html{
     padding: 6px;
     margin-right: 8px;
     color: white ;
+    text-decoration: none;
+}
+
+.custom-icon1 {
+    border: 2px solid #20204D;
+    border-radius: 30px;
+    font-size: 1.1em !important;
+    padding: 6px;
+    color: #20204D ;
     text-decoration: none;
 }
 
@@ -94,6 +119,12 @@ body, html{
 
 @media only screen and (max-width: 1024px) {
     .index-image {
+        height: 70vh !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .metho-img {
         height: 70vh !important;
     }
 }
@@ -141,7 +172,6 @@ body, html{
     font-size: 17px;
     padding:7px;
     border-radius: 20px;
-
 }
 
 .carousel-control-prev-icon {
@@ -193,7 +223,8 @@ body, html{
 }
 
 .card-img-top{
-    min-height: 175px;
+    min-height: 218px;
+    max-height: 250px;
 }
 
 .bg-contact{
@@ -270,8 +301,8 @@ label {
 }
 .bounce {
     animation: bounce 2s infinite;
-
 }
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateY(0);
@@ -282,10 +313,40 @@ label {
     60% {
         transform: translateY(-15px);
     }
-
 }
 
+.team-img {
+    border-radius: 50%;
+    width: 200px;
+    height:200px;
+    object-fit: cover;
+    margin: 5px;
+}
 
+.red-line {
+    background-color: red;
+    width: 100px;
+    height: 2px;
+}
+
+.double-line{
+    width: 80% !important;
+    height: 0.2px;
+    background-color: #494b41;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("./images/parallax1.jpg");
+
+    /* Full height */
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 /* index */

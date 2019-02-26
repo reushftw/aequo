@@ -1,0 +1,152 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% include 'default/navbar.html.twig' %}
+
+    <section style="margin-top: 40px">
+        <div class="titles">
+            <h1>About Us</h1>
+            <p style="color: black !important;">"Reach new heights"</p>
+        </div>
+        <div class="container">
+            <div class="row justify-content-around">
+                <span class="custom-icons1">
+                <span><a href=""><i class="icon-facebook custom-icon1"></i></a></span>
+                <span><a href=""><i class="icon-linkedin2 custom-icon1"></i></a></span>
+                <span><a href=""><i class="icon-twitter custom-icon1"></i></a></span>
+            </span>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row ">
+                <div class=" col-lg-6 col-md-6" style="text-align: right; margin-top: 20px; margin-bottom: 20px">
+                    <span class="title-aequo">Aequo Ltd</span>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme
+                        assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <hr class="double-line">
+        <hr class="double-line">
+
+    <section>
+        <div class="titles" style="padding-top: 10px">
+            <h1>Team</h1>
+            <p style="color: black">Meet our experts</p>
+        </div>
+
+        <div class="container" style="margin-bottom: 30px">
+            <div class="row">
+                <div class=" col-lg-6 col-md-6" style="text-align: center;">
+                    <img class="team-img zoom" src="{{ asset('assets/images/team/ghassen.jpg') }}" alt="">
+                    <h5 style="margin-top: 15px">Karim NAFATI</h5>
+                    <hr class="red-line">
+                    <h6>President Aequo Ltd</h6>
+                    <span><a href=""><i class="icon-linkedin2 custom-icon1"></i></a></span>
+                </div>
+                <div class=" col-lg-6 col-md-6" style="text-align: center;">
+                    <img class="team-img zoom" src="{{ asset('assets/images/team/ghassen.jpg') }}" alt="">
+                    <h5 style="margin-top: 15px">Karim NAFATI</h5>
+                    <hr class="red-line">
+                    <h6>President Aequo Ltd</h6>
+                    <span><a href=""><i class="icon-linkedin2 custom-icon1"></i></a></span>
+                </div>
+            </div>
+
+            <div class="row justify-content-around" style="margin-top: 40px">
+                <div class=" col-lg-3 col-md-3" style="text-align: center;">
+                    <img class="team-img zoom" src="{{ asset('assets/images/team/ghassen.jpg') }}" alt="">
+                    <h5 style="margin-top: 15px">Karim NAFATI</h5>
+                    <hr class="red-line">
+                    <h6>President Aequo Ltd</h6>
+                    <span><a href=""><i class="icon-linkedin2 custom-icon1"></i></a></span>
+                </div>
+                <div class=" col-lg-3 col-md-3" style="text-align: center;">
+                    <img class="team-img zoom" src="{{ asset('assets/images/team/ghassen.jpg') }}" alt="">
+                    <h5 style="margin-top: 15px">Karim NAFATI</h5>
+                    <hr class="red-line">
+                    <h6>President Aequo Ltd</h6>
+                    <span><a href=""><i class="icon-linkedin2 custom-icon1"></i></a></span>
+                </div>
+                <div class=" col-lg-3 col-md-3" style="text-align: center;">
+                    <img class="team-img zoom" src="{{ asset('assets/images/team/ghassen.jpg') }}" alt="">
+                    <h5 style="margin-top: 15px">Karim NAFATI</h5>
+                    <hr class="red-line">
+                    <h6>President Aequo Ltd</h6>
+                    <span><a href=""><i class="icon-linkedin2 custom-icon1"></i></a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {#level 6#}
+    <section class="bg-contact">
+        <div class="container" >
+            <div class="row justify-content-center" style="margin-top: 50px;">
+                <div class="titles">
+                    <h1>Any Question?</h1>
+                    <h4>Don't hesitate to contact us</h4>
+                </div>
+            </div>
+            {{ form_start(form) }}
+            <div class="row justify-content-center" style="margin-top: 20px;">
+                <div class="col-lg-4 col-sm-5">
+                    <div class="form-group">
+                        {{ form_row(form.firstName) }}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-5">
+                    <div class="form-group">
+                        {{ form_row(form.lastName) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center" style="margin-top: 20px;">
+                <div class="col-lg-4 col-sm-5">
+                    <div class="form-group">
+                        {{ form_row(form.email) }}
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-5">
+                    <div class="form-group">
+                        {{ form_row(form.phone) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center" style="margin-top: 20px;">
+                <div class="col-lg-4 col-sm-8 ">
+                    <div class="form-group">
+                        {{ form_row(form.fonction) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center" style="margin-top: 20px;">
+                <div class="col-lg-4 col-sm-8">
+                    <div class="form-group">
+                        {{ form_row(form.message) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center" style="margin-top: 20px;">
+                {{ form_row(form.save) }}
+            </div>
+
+            {{ form_errors(form) }}
+            {{ form_rest(form) }}
+            {{ form_end(form) }}
+        </div>
+    </section>
+
+
+    {% include'default/footer.html.twig' %}
+{% endblock %}

@@ -10,19 +10,28 @@
                 <a class="nav-link" href="#">Discover<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">News</a>
+                <a class="nav-link" href="{{ path('newspage') }}">News</a>
+            </li>
+            <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Expertise
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ path('laboratorypage') }}">Laboratory</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="{{ path('assistancepage') }}">Assistance</a>
+                    <a class="dropdown-item" href="{{ path('auditpage') }}">Audit</a>
+                    <a class="dropdown-item" href="{{ path('trainingpage') }}">Training</a>
+                </div>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">Expertise</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="{{ path('aboutuspage') }}">About Us</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#">Our Methodology</a>
             </li>
             <li class="nav-item active">
-                <a id="nav-contact" class="nav-item-button nav-link"  href="#">CONTACT</a>
+                <a id="nav-contact" class="nav-item-button nav-link"  href="#contact">CONTACT</a>
             </li>
         </ul>
 
