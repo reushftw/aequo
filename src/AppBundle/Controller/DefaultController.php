@@ -12,7 +12,8 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="homepage_nl", defaults={"_locale":"%locale%"})
+     * @Route("/{_locale}/", name="homepage", requirements={"_locale" = "%app.locales%"}, defaults={"_locale":"%locale%"})
      */
     public function indexAction(Request $request)
     {
@@ -28,15 +29,20 @@ class DefaultController extends Controller
             return $this->redirectToRoute('homepage');
         }
 
+        $qb = $this->getDoctrine()->getManager()->getRepository(BlogPost::class)->createQueryBuilder('b');
+        $blogs = $qb->where('b.enabled = true')->setMaxResults(6)->getQuery()->execute();
+        //dump($blogs);
+
         return $this->render('default/index.html.twig', array(
             'form' => $form->createView(),
+            'blogs' => $blogs
         ));
     }
 
     /**
-     * @Route("/news", name="newspage")
+     * @Route("/{_locale}/news", name="newspage", requirements={"_locale" = "%app.locales%"})
      */
-    public function newsAction(Request $request)
+    public function newsAction()
     {
         $blog=$this->getDoctrine()->getManager()->getRepository(BlogPost::class)->findBy(array('enabled'=>true));
 
@@ -46,7 +52,19 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/assistance", name="assistancepage")
+     * @Route("/{_locale}/news/{id}", name="newspage_details", requirements={"_locale" = "%app.locales%"})
+     */
+    public function newsDetailsAction()
+    {
+        $blog=$this->getDoctrine()->getManager()->getRepository(BlogPost::class)->findBy(array('enabled'=>true));
+
+        return $this->render('default/news.html.twig', array(
+            'blog' => $blog
+        ));
+    }
+
+    /**
+     * @Route("/{_locale}/assistance", name="assistancepage", requirements={"_locale" = "%app.locales%"})
      */
     public function assistanceAction(Request $request)
     {
@@ -68,7 +86,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/audit", name="auditpage")
+     * @Route("/{_locale}/audit", name="auditpage", requirements={"_locale" = "%app.locales%"})
      */
     public function auditAction(Request $request)
     {
@@ -90,7 +108,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/training", name="trainingpage")
+     * @Route("/{_locale}/training", name="trainingpage", requirements={"_locale" = "%app.locales%"})
      */
     public function trainingAction(Request $request)
     {
@@ -112,7 +130,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/laboratory", name="laboratorypage")
+     * @Route("/{_locale}/laboratory", name="laboratorypage", requirements={"_locale" = "%app.locales%"})
      */
     public function laboratoryAction(Request $request)
     {
@@ -134,7 +152,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/aboutus", name="aboutuspage")
+     * @Route("/{_locale}/about-us", name="aboutuspage", requirements={"_locale" = "%app.locales%"})
      */
     public function aboutusAction(Request $request)
     {

@@ -53,7 +53,7 @@ class Message
      *
      * @Assert\NotBlank()
      * @Assert\Regex(
-     *     pattern="/^[a-zA-Z]*$/",
+     *     pattern="/^[a-zA-Z ]*$/",
      *     message="Invalid",
      * )
      *
@@ -77,7 +77,7 @@ class Message
     /**
      * @var string
      *
-     * * @Assert\Regex(
+     * @Assert\Regex(
      *     pattern="/\d{8}/",
      *     htmlPattern="/\d{8}/",
      *     message="Invalid",

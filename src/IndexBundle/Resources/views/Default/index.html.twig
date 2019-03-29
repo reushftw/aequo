@@ -23,65 +23,15 @@
         <!-- /page header -->
 
         <!-- Content area -->
-        {#
         <div class="content">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="panel bg-pink-400">
-                        <div class="panel-body">
-                            <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-archive"></i></div>
-                            <div class="col-lg-9">
-                                <h3 class="no-margin"></h3>
-                                <div class="text-muted text-size-small">Commandes non archivées</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="panel bg-purple-400">
-                        <div class="panel-body">
-                            <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-envelop2"></i></div>
-                            <div class="col-lg-9">
-                                <h3 class="no-margin"></h3>
-                                <div class="text-muted text-size-small">Nombre de messages</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="panel bg-teal-400">
-                        <div class="panel-body">
-                            <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-users4"></i></div>
-                            <div class="col-lg-9">
-                                <h3 class="no-margin"></h3>
-                                <div class="text-muted text-size-small">Revenu des commandes livrées</div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <h2>Produits les plus demandés</h2>
-            <div class="row">
-                    <div class="col-lg-4">
-                        <div class="panel bg-green-400">
-                            <div class="panel-body">
-                                <div class="col-lg-3" style="margin-top: 13px;"><i class="icon-cart2"></i></div>
-                                <div class="col-lg-9">
-                                    <h3 class="no-margin">Produit: </h3>
-                                    <div class="text-muted text-size-small">Nombre de demande devis: </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <section id="auth-button"></section>
+                <section id="view-selector"></section>
+                <section id="timeline"></section>
             </div>
 
             {% include 'admin/footer.html.twig' %}
         </div>
-        #}
         <!-- /content area -->
 
     </div>
@@ -91,5 +41,65 @@
 
     </div>
     <!-- /page container -->
+
+    <script>
+        (function(w,d,s,g,js,fjs){
+            g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(cb){this.q.push(cb)}};
+            js=d.createElement(s);fjs=d.getElementsByTagName(s)[0];
+            js.src='https://apis.google.com/js/platform.js';
+            fjs.parentNode.insertBefore(js,fjs);js.onload=function(){g.load('analytics')};
+        }(window,document,'script'));
+    </script>
+
+    <script>
+        gapi.analytics.ready(function() {
+
+            // Step 3: Authorize the user.
+
+            var CLIENT_ID = '160476716103-9hivg0kdhdfj2nfun37run39vjkv4mki.apps.googleusercontent.com';
+
+            gapi.analytics.auth.authorize({
+                container: 'auth-button',
+                clientid: CLIENT_ID,
+            });
+
+            // Step 4: Create the view selector.
+
+            var viewSelector = new gapi.analytics.ViewSelector({
+                container: 'view-selector'
+            });
+
+            // Step 5: Create the timeline chart.
+
+            var timeline = new gapi.analytics.googleCharts.DataChart({
+                reportType: 'ga',
+                query: {
+                    'dimensions': 'ga:date',
+                    'metrics': 'ga:sessions',
+                    'start-date': '30daysAgo',
+                    'end-date': 'yesterday',
+                },
+                chart: {
+                    type: 'LINE',
+                    container: 'timeline'
+                }
+            });
+
+            // Step 6: Hook up the components to work together.
+
+            gapi.analytics.auth.on('success', function(response) {
+                viewSelector.execute();
+            });
+
+            viewSelector.on('change', function(ids) {
+                var newIds = {
+                    query: {
+                        ids: ids
+                    }
+                }
+                timeline.set(newIds).execute();
+            });
+        });
+    </script>
 
 {% endblock %}

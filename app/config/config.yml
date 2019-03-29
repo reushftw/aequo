@@ -7,15 +7,10 @@ imports:
     - { resource: "@ContactBundle/Resources/config/services.yml" }
     - { resource: "@UserBundle/Resources/config/services.yml" }
 
-# Put parameters here that don't need to change on each machine where the app is deployed
-# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: en
-    app.path.user_images: /uploads/img/user_images
+    app.locales: en|fr
     app.path.blog_images: /uploads/img/blog_images
-    app.path.project_images: /uploads/img/project_images
-    app.path.partner_images: /uploads/img/partner_images
-    app.path.service_images: /uploads/img/service_images
 
 framework:
     translator: { fallbacks: ['%locale%'] }
@@ -82,28 +77,8 @@ fos_user:
 vich_uploader:
     db_driver: orm
     mappings:
-        user_images:
-            uri_prefix:         '%app.path.user_images%'
-            upload_destination: '%kernel.root_dir%/../web/uploads/img/user_images'
-            delete_on_remove: false
-            delete_on_update: false
         blog_images:
             uri_prefix:         '%app.path.blog_images%'
             upload_destination: '%kernel.root_dir%/../web/uploads/img/blog_images'
-            delete_on_remove: false
-            delete_on_update: false
-        project_images:
-            uri_prefix:         '%app.path.project_images%'
-            upload_destination: '%kernel.root_dir%/../web/uploads/img/project_images'
-            delete_on_remove: false
-            delete_on_update: false
-        partner_images:
-            uri_prefix:         '%app.path.partner_images%'
-            upload_destination: '%kernel.root_dir%/../web/uploads/img/partner_images'
-            delete_on_remove: false
-            delete_on_update: false
-        service_images:
-            uri_prefix:         '%app.path.service_images%'
-            upload_destination: '%kernel.root_dir%/../web/uploads/img/service_images'
             delete_on_remove: false
             delete_on_update: false

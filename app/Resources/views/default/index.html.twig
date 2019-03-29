@@ -39,88 +39,46 @@
             <h1>Latest News</h1>
         </div>
         <div class="container">
-            <div class="card-deck row justify-content-center">
-                <div class="col-lg-4 col-sm-8">
+            <div class="card-deck row justify-content-center mt-30">
+                {% for b in blogs %}
+                <div class="col-lg-4 col-sm-8 mt-5">
                     <div class="card">
-                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
+                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ vich_uploader_asset(b,'imageFile') }}" alt="Card image cap"></a>
                         <div class="card-body">
-                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <a href="" class="text-card-style">
+                                <h5 class="card-title">
+                                    {% if app.request.locale == 'en' %}
+                                        {{ b.titleEn }}
+                                    {% else %}
+                                        {{ b.titleFr }}
+                                    {% endif %}
+                                </h5></a>
+                            <p class="card-text">
+                                {% if app.request.locale == 'en' %}
+                                    {{ b.descriptionEn }}
+                                {% else %}
+                                    {{ b.descriptionFr }}
+                                {% endif %}
+                            </p>
                         </div>
                         <div class="card-footer">
-                            <small class="text-tag-card-footer">Laboratory</small>
+                            <small class="text-tag-card-footer">
+                                {% if app.request.locale == 'en' %}
+                                    {{ b.tagEn }}
+                                {% else %}
+                                    {{ b.tagFr }}
+                                {% endif %}
+                            </small>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-8">
-                    <div class="card">
-                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
-                        <div class="card-body">
-                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-tag-card-footer">Press release</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-8">
-                    <div class="card">
-                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
-                        <div class="card-body">
-                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-tag-card-footer">IT</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-deck row justify-content-center" style="margin-top: 30px">
-                <div class="col-lg-4 col-sm-8">
-                    <div class="card">
-                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
-                        <div class="card-body">
-                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-tag-card-footer">Press release</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-8">
-                    <div class="card">
-                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/mouna1.png') }}" alt="Card image cap"></a>
-                        <div class="card-body">
-                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
-                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-tag-card-footer">Laboratory</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-8">
-                    <div class="card">
-                        <a href="" style="overflow: hidden"><img class="card-img-top zoom" src="{{ asset ('assets/images/bc1.jpg') }}" alt="Card image cap"></a>
-                        <div class="card-body">
-                            <a href="" class="text-card-style"><h5 class="card-title">Card title</h5></a>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-tag-card-footer">IT</small>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
             <div class="container">
                 <div class="row">
                     <div class="col text-center" style="margin: 50px">
-                        <button class="btn btn-see-all">All Articles </button>
+                        <a href="{{ path('newspage') }}" class="btn btn-see-all">All Articles </a>
                     </div>
                 </div>
             </div>
@@ -136,16 +94,16 @@
         <div class="container">
             <div class="row justify-content-around">
                 <div class="col-lg-4 col-sm-8 text-center">
-                    <a href=""><img class="img-fluid img-border" src="{{ asset('assets/images/icons/assistance.png') }}" alt=""></a>
-                    <a href="" class="link-style"><h2>Assistance</h2></a>
+                    <a href="{{ path('assistancepage') }}"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/assistance.png') }}" alt=""></a>
+                    <a href="{{ path('assistancepage') }}" class="link-style"><h2>Assistance</h2></a>
                     <hr class="hr-style">
                     <p>
                         On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
                     </p>
                 </div>
                 <div class="col-lg-4 col-sm-8 text-center">
-                    <a href="" class="link-style"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/audit.png') }}" alt=""></a>
-                    <a href="" class="link-style"><h2>Audit</h2></a>
+                    <a href="{{ path('auditpage') }}" class="link-style"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/audit.png') }}" alt=""></a>
+                    <a href="{{ path('auditpage') }}" class="link-style"><h2>Audit</h2></a>
                     <hr class="hr-style">
                     <p>
                         On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
@@ -155,16 +113,16 @@
 
                 <div class="row justify-content-around">
                     <div class="col-lg-4 col-sm-8 text-center">
-                        <a href="" class="link-style"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/formation.png') }}" alt=""></a>
-                            <a href="" class="link-style"><h2>Formation</h2></a>
+                        <a href="{{ path('trainingpage') }}" class="link-style"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/formation.png') }}" alt=""></a>
+                            <a href="{{ path('trainingpage') }}" class="link-style"><h2>Formation</h2></a>
                         <hr class="hr-style">
                         <p>
                             On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
                         </p>
                     </div>
                     <div class="col-lg-4 col-sm-8 text-center">
-                        <a href="" class="link-style"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/lab.png') }}" alt=""></a>
-                        <a href="" class="link-style"><h2>Laboratoire</h2></a>
+                        <a href="{{ path('laboratorypage') }}" class="link-style"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/lab.png') }}" alt=""></a>
+                        <a href="{{ path('laboratorypage') }}" class="link-style"><h2>Laboratoire</h2></a>
                         <hr class="hr-style">
                         <p>
                             On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
@@ -176,7 +134,7 @@
 
 
     {#level 4#}
-    <section style="background-color: #f7f6f7;">
+    <section style="background-color: #f7f6f7;" id="methodology">
         <div class=" bg-color">
             <div class="titles">
                 <h1>Our Methodology</h1>
@@ -196,16 +154,16 @@
             </div>
         <div class="container" style="margin-top: 30px">
            <div class="row justify-content-around">
-               <div class="col-lg-1 col-sm-1">
+               <div class="col-lg-1 col-sm-2">
                    <img class="img-fluid" src="{{ asset ('assets/images/partners/google.png') }}" alt="">
                </div>
-               <div class="col-lg-1 col-sm-1">
+               <div class="col-lg-1 col-sm-2">
                    <img class="img-fluid" src="{{ asset ('assets/images/partners/yahoo.png') }}" alt="">
                </div>
-               <div class="col-lg-1 col-sm-1">
+               <div class="col-lg-1 col-sm-2">
                    <img class="img-fluid" src="{{ asset ('assets/images/partners/orange.png') }}" alt="">
                </div>
-               <div class="col-lg-1 col-sm-1">
+               <div class="col-lg-1 col-sm-2">
                    <img class="img-fluid" src="{{ asset ('assets/images/partners/topnet.png') }}" alt="">
                </div>
            </div>

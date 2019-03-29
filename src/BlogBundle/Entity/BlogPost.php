@@ -41,6 +41,20 @@ class BlogPost
     /**
      * @var string
      *
+     * @ORM\Column(name="tag_en", type="string", length=255)
+     */
+    private $tagEn;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tag_fr", type="string", length=255)
+     */
+    private $tagFr;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="description_en", type="text")
      */
     private $descriptionEn;
@@ -80,7 +94,7 @@ class BlogPost
     private $image;
 
     /**
-     * @Vich\UploadableField(mapping="user_images", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="blog_images", fileNameProperty="image")
      * @var File
      */
     private $imageFile;
@@ -334,6 +348,38 @@ class BlogPost
     public function setEnabled($enabled)
     {
         $this->enabled = $enabled;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTagEn()
+    {
+        return $this->tagEn;
+    }
+
+    /**
+     * @param string $tagEn
+     */
+    public function setTagEn($tagEn)
+    {
+        $this->tagEn = $tagEn;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTagFr()
+    {
+        return $this->tagFr;
+    }
+
+    /**
+     * @param string $tagFr
+     */
+    public function setTagFr($tagFr)
+    {
+        $this->tagFr = $tagFr;
     }
 }
 

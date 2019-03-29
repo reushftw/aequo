@@ -19,7 +19,7 @@ class BlogPostType extends AbstractType
     {
         $builder
             ->add('titleFr', TextType::class)
-            ->add('titleEn', TextareaType::class)
+            ->add('titleEn', TextType::class)
             ->add('postDate', DateType::class, array(
                 'data' => new \DateTime("now")
             ))
@@ -27,6 +27,8 @@ class BlogPostType extends AbstractType
             ->add('descriptionEn', TextareaType::class)
             ->add('contentFr', CKEditorType::class)
             ->add('contentEn', CKEditorType::class)
+            ->add('tagFr', TextType::class)
+            ->add('tagEn', TextType::class)
             ->add('imageFile', VichImageType::class, array(
                 'download_link' => false,
                 'required' => false,
