@@ -54,12 +54,15 @@ class DefaultController extends Controller
     /**
      * @Route("/{_locale}/news/{id}", name="newspage_details", requirements={"_locale" = "%app.locales%"})
      */
-    public function newsDetailsAction()
+    public function newsDetailsAction($id)
     {
-        $blog=$this->getDoctrine()->getManager()->getRepository(BlogPost::class)->findBy(array('enabled'=>true));
+        $blog=$this->getDoctrine()->getManager()->getRepository(BlogPost::class)->findOneBy(array('id' => $id, 'enabled' => true));
+        if (!$blog) {
+            throw $this->createNotFoundException('This article does not exist');
+        }
 
-        return $this->render('default/news.html.twig', array(
-            'blog' => $blog
+        return $this->render('default/article.html.twig', array(
+            'b' => $blog
         ));
     }
 

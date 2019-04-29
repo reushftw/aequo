@@ -12,11 +12,11 @@
                 {% for b in blog %}
                     <div class="col-lg-4 col-sm-8 mt-5">
                         <div class="card">
-                            <a href="" style="overflow: hidden">
+                            <a href="{{ path('newspage_details', {'id': b.id}) }}" style="overflow: hidden">
                                 <img class="card-img-top zoom" src="{{ vich_uploader_asset(b,'imageFile') }}" alt="Card image cap">
                             </a>
                             <div class="card-body">
-                                <a href="" class="text-card-style">
+                                <a href="{{ path('newspage_details', {'id': b.id}) }}" class="text-card-style">
                                     <h5 class="card-title">
                                         {% if app.request.locale == 'en' %}
                                             {{ b.titleEn }}
