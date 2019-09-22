@@ -8,8 +8,8 @@ imports:
     - { resource: "@UserBundle/Resources/config/services.yml" }
 
 parameters:
-    locale: en
-    app.locales: en|fr
+    locale: fr
+    app.locales: fr|en
     app.path.blog_images: /uploads/img/blog_images
 
 framework:

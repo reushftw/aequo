@@ -9,28 +9,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{{ path('homepage') }}">Discover<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{ path('homepage') }}">Découvrir<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{{ path('newspage') }}">News</a>
+                <a class="nav-link" href="{{ path('newspage') }}">À la une</a>
             </li>
             <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Expertise
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ path('laboratorypage') }}">Laboratory</a>
+                    <a class="dropdown-item" href="{{ path('homepage') }}#expertise">Laboratoire</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{ path('assistancepage') }}">Assistance</a>
+                    <a class="dropdown-item" href="{{ path('homepage') }}#expertise">Assistance & Formation</a>
+                    <!--
                     <a class="dropdown-item" href="{{ path('auditpage') }}">Audit</a>
                     <a class="dropdown-item" href="{{ path('trainingpage') }}">Training</a>
+                    -->
                 </div>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{{ path('aboutuspage') }}">About Us</a>
+                <a class="nav-link" href="{{ path('aboutuspage') }}">À Propos</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{{ path('homepage') }}#methodology">Our Methodology</a>
+                <a class="nav-link" href="{{ path('homepage') }}#methodology">Notre Methodologie</a>
             </li>
             <li class="nav-item active">
                 <a id="nav-contact" class="nav-item-button nav-link"  href="{{ path('homepage') }}#contact">CONTACT</a>
@@ -39,9 +41,9 @@
 
         <div class="text-right">
             <span class="custom-icons">
-                <span><a href=""><i class="icon-facebook custom-icon"></i></a></span>
-                <span><a href=""><i class="icon-linkedin2 custom-icon"></i></a></span>
-                <span><a href=""><i class="icon-twitter custom-icon"></i></a></span>
+                <span><a target="_BLANK" href="https://www.facebook.com/knafati"><i class="icon-facebook custom-icon"></i></a></span>
+                <span><a target="_BLANK" href="https://www.linkedin.com/in/mona-makhlouf"><i class="icon-linkedin2 custom-icon"></i></a></span>
+                <span><a href="#"><i class="icon-twitter custom-icon"></i></a></span>
             </span>
             <span>
                 <span><a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}"><img src="{{ asset('admin_assets/images/flags/us.png') }}" alt=""></a></span>

@@ -27,8 +27,15 @@
         <div class="container">
             <div class="title-news ">
                 <h2>Aequo Ltd,</h2>
-                <h5 style="color: #333">We are what our partners expect from us, a coalition of expertise of technical assistance and human
-                    resource support to the benefit of industrial companies, laboratories and quality departments.</h5>
+                <h5 style="color: #333; font-size:1.1em;">
+                    Aequo Ltd est la réalisation de 17 années d'expertise sur le système d'infrastructure qualité:
+
+                    Métrologie, normalisation, accréditation, certification, contrôle d'inspection et gestion de la qualité (ISO 9001, ISO 17025, ISO 17020, ISO 15189)
+
+                    Nous mettons également en place un système de gestion des risques efficace au sein de votre entreprise:
+
+                    Intégration des meilleures pratiques, support à la certification (ISO 14001, ISO 18001, ISO 31000…)
+                </h5>
             </div>
         </div>
     </section>
@@ -36,7 +43,7 @@
     {#level 2#}
     <section style="background-color: #f7f6f7;">
         <div class="titles" >
-            <h1>Latest News</h1>
+            <h1>À la une</h1>
         </div>
         <div class="container">
             <div class="card-deck row justify-content-center mt-30">
@@ -87,30 +94,30 @@
 
     {#level 3#}
     <section>
-        <div class="titles">
+        <div class="titles" id="expertise">
             <h1>Expertise</h1>
-            <h4>insert some texte here if you need</h4>
+            <!--<h4>insert some texte here if you need</h4>-->
         </div>
         <div class="container">
             <div class="row justify-content-around">
                 <div class="col-lg-4 col-sm-8 text-center">
-                    <a href="{{ path('assistancepage') }}"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/assistance.png') }}" alt=""></a>
-                    <a href="{{ path('assistancepage') }}" class="link-style"><h2>Assistance</h2></a>
+                    <a href="#"><img class="img-fluid img-border" style="border-radius:30px; " src="{{ asset('assets/images/icons/a&f.png') }}" alt=""></a>
+                    <a href="#" class="link-style"><h2>Assistance & Formation</h2></a>
                     <hr class="hr-style">
-                    <p>
+                  <!--  <p>
                         On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
-                    </p>
+                    </p>-->
                 </div>
                 <div class="col-lg-4 col-sm-8 text-center">
-                    <a href="{{ path('auditpage') }}" class="link-style"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/audit.png') }}" alt=""></a>
-                    <a href="{{ path('auditpage') }}" class="link-style"><h2>Audit</h2></a>
+                    <a href="#" class="link-style" style="border-radius:30px; "><img class="img-fluid img-border" src="{{ asset('assets/images/icons/sphere.png') }}" alt=""></a>
+                    <a href="#" class="link-style"><h2>Laboratoire</h2></a>
                     <hr class="hr-style">
-                    <p>
+                    <!-- <p>
                         On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
-                    </p>
+                    </p>-->
                 </div>
             </div>
-
+<!--
                 <div class="row justify-content-around">
                     <div class="col-lg-4 col-sm-8 text-center">
                         <a href="{{ path('trainingpage') }}" class="link-style"><img class="img-fluid img-border" src="{{ asset('assets/images/icons/formation.png') }}" alt=""></a>
@@ -129,6 +136,7 @@
                         </p>
                     </div>
                 </div>
+-->
         </div>
     </section>
 
@@ -150,21 +158,21 @@
     {#level 5#}
     <section>
             <div class="titles">
-                <h1>Our Partners</h1>
+                <h1>Nos Partenaire</h1>
             </div>
-        <div class="container" style="margin-top: 30px">
+        <div class="container partners" style="margin-top: 30px">
            <div class="row justify-content-around">
-               <div class="col-lg-1 col-sm-2">
-                   <img class="img-fluid" src="{{ asset ('assets/images/partners/google.png') }}" alt="">
+               <div class="col-lg-2 col-md-4">
+                   <a target="_blank" href="http://www.metrodata.de/AE2119"><img class="img-fluid" src="{{ asset ('assets/images/partners/metrodata.png') }}" alt=""></a>
                </div>
-               <div class="col-lg-1 col-sm-2">
-                   <img class="img-fluid" src="{{ asset ('assets/images/partners/yahoo.png') }}" alt="">
+               <div class="col-lg-2 col-md-4">
+                   <img class="img-fluid" src="{{ asset ('assets/images/partners/aequo.png') }}" alt="">
                </div>
-               <div class="col-lg-1 col-sm-2">
-                   <img class="img-fluid" src="{{ asset ('assets/images/partners/orange.png') }}" alt="">
+               <div class="col-lg-2 col-md-4">
+                   <a target="_blank" href="http://www.metrodata.de/AE2119"><img class="img-fluid" src="{{ asset ('assets/images/partners/metrodata.png') }}" alt=""></a>
                </div>
-               <div class="col-lg-1 col-sm-2">
-                   <img class="img-fluid" src="{{ asset ('assets/images/partners/topnet.png') }}" alt="">
+               <div class="col-lg-2 col-md-4">
+                   <img class="img-fluid" src="{{ asset ('assets/images/partners/aequo.png') }}" alt="">
                </div>
            </div>
         </div>
@@ -175,8 +183,8 @@
         <div class="container" >
             <div class="row justify-content-center" style="margin-top: 50px;">
                 <div class="titles">
-                    <h1>Any Question?</h1>
-                    <h4>Don't hesitate to contact us</h4>
+                    <h1>Des questions?</h1>
+                    <h4>N'hésitez pas à nous contacter</h4>
                 </div>
             </div>
             {{ form_start(form) }}
