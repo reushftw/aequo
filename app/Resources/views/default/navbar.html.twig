@@ -9,19 +9,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{{ path('homepage') }}">{% trans %}Découvrir{% endtrans %}<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{ path('homepage') }}">{{ 'translate.home'|trans }}<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{{ path('newspage') }}">{% trans %} À la une {% endtrans%}</a>
+                <a class="nav-link" href="{{ path('newspage') }}">{{ 'translate.news'|trans }}</a>
             </li>
             <li class="nav-item dropdown active">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Expertise
+                    {{ 'translate.expertise'|trans }}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ path('homepage') }}#expertise">{% trans %}Laboratoire{% endtrans %}</a>
+                    <a class="dropdown-item" href="{{ path('homepage') }}#expertise">{{ 'translate.laboratoire'|trans }}</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{ path('homepage') }}#expertise">{% trans %}Assistance & Formation{% endtrans %}</a>
+                    <a class="dropdown-item" href="{{ path('homepage') }}#expertise">{{ 'translate.assetfor'|trans }}</a>
                     <!--
                     <a class="dropdown-item" href="{{ path('auditpage') }}">Audit</a>
                     <a class="dropdown-item" href="{{ path('trainingpage') }}">Training</a>
@@ -29,13 +29,13 @@
                 </div>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{{ path('aboutuspage') }}">{% trans %}À propos{% endtrans %}</a>
+                <a class="nav-link" href="{{ path('aboutuspage') }}">{{ 'translate.aboutus'|trans }}</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{{ path('homepage') }}#methodology">{% trans %}Notre Méthodologie{% endtrans %}</a>
+                <a class="nav-link" href="{{ path('homepage') }}#methodology">{{ 'translate.methodology'|trans }}</a>
             </li>
             <li class="nav-item active">
-                <a id="nav-contact" class="nav-item-button nav-link"  href="{{ path('homepage') }}#contact">{% trans %}CONTACT{% endtrans %}</a>
+                <a id="nav-contact" class="nav-item-button nav-link"  href="{{ path('homepage') }}#contact">{{ 'translate.contact'|trans }}</a>
             </li>
         </ul>
 

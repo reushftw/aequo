@@ -28,8 +28,7 @@
             <div class="title-news ">
                 <h2>Aequo Ltd,</h2>
                 <h5 style="color: #333; font-size:1.1em;">
-                    {% trans %}Aequo Ltd est la réalisation de 17 années d'expertise sur le système d'infrastructure qualité Métrologie, normalisation, accréditation, certification, contrôle d'inspection et gestion de la qualité (ISO 9001, ISO 17025, ISO 17020, ISO 15189) Nous mettons également en place un système de gestion des risques efficace au sein de votre entreprise Intégration des meilleures pratiques, support à la certification (ISO 14001, ISO 18001, ISO 31000…){% endtrans %}
-                </h5>
+                    {{ 'translate.desc'|trans }}                </h5>
             </div>
         </div>
     </section>
@@ -37,7 +36,7 @@
     {#level 2#}
     <section style="background-color: #f7f6f7;">
         <div class="titles" >
-            <h1>{% trans%}À la une{% endtrans %}</h1>
+            <h1>{{ 'translate.news'|trans }}</h1>
         </div>
         <div class="container">
             <div class="card-deck row justify-content-center mt-30">
@@ -96,7 +95,7 @@
             <div class="row justify-content-around">
                 <div class="col-lg-4 col-sm-8 text-center">
                     <a href="#"><img class="img-fluid img-border" style="border-radius:30px; " src="{{ asset('assets/images/icons/a&f.png') }}" alt=""></a>
-                    <a href="#" class="link-style"><h2>Assistance & Formation</h2></a>
+                    <a href="#" class="link-style"><h2>{{ 'translate.assetfor'|trans }}</h2></a>
                     <hr class="hr-style">
                   <!--  <p>
                         On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
@@ -104,7 +103,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-8 text-center">
                     <a href="#" class="link-style" style="border-radius:30px; "><img class="img-fluid img-border" src="{{ asset('assets/images/icons/sphere.png') }}" alt=""></a>
-                    <a href="#" class="link-style"><h2>Laboratoire</h2></a>
+                    <a href="#" class="link-style"><h2>{{ 'translate.laboratoire'|trans }}</h2></a>
                     <hr class="hr-style">
                     <!-- <p>
                         On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même.
@@ -139,7 +138,7 @@
     <section style="background-color: #f7f6f7;" id="methodology">
         <div class=" bg-color">
             <div class="titles">
-                <h1>{% trans %}Notre Méthodologie{% endtrans %}</h1>
+                <h1>{{ 'translate.methodology'|trans }}</h1>
                 <h4></h4>
             </div>
             <div class="row justify-content-around">
@@ -152,7 +151,7 @@
     {#level 5#}
     <section>
             <div class="titles">
-                <h1>{% trans %}Nos Partenaires{% endtrans %}</h1>
+                <h1>{{ 'translate.partenaire'|trans }}</h1>
             </div>
         <div class="container partners" style="margin-top: 30px">
            <div class="row justify-content-around">
@@ -177,8 +176,8 @@
         <div class="container" >
             <div class="row justify-content-center" style="margin-top: 50px;">
                 <div class="titles">
-                    <h1>{% trans %}Des questions{% endtrans %}?</h1>
-                    <h4>{% trans %}N'hésitez pas à nous contacter{% endtrans %}</h4>
+                    <h1>{{ 'translate.question'|trans }}?</h1>
+                    <h4>{{ 'translate.textquestion'|trans }}</h4>
                 </div>
             </div>
             {{ form_start(form) }}

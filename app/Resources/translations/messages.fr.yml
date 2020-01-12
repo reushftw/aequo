@@ -1,15 +1,14 @@
 #navbar elements
-Découvrir : Discover
-À la une: News
-Expertise: Expertise
-Laboratoire: Laboratory
-Assistance & Formation: Assitance & Training
-À propos: About us
-Notre Méthodologie: Our Methodology
-Contact: Contact
+translate.home : Découvrir
+translate.news: À la une
+translate.expertise: Expertise
+translate.laboratoire: Laboratoire
+translate.assetfor: Assitance & Formation
+translate.aboutus: À propos
+translate.methodology: Notre Méthodologie
+translate.contact: Contact
 
-Aequo Ltd est la réalisation de 17 années d'expertise sur le système d'infrastructure qualité Métrologie, normalisation, accréditation, certification, contrôle d'inspection et gestion de la qualité (ISO 9001, ISO 17025, ISO 17020, ISO 15189) Nous mettons également en place un système de gestion des risques efficace au sein de votre entreprise Intégration des meilleures pratiques, support à la certification (ISO 14001, ISO 18001, ISO 31000…): Aequo Ltd is the achievement of 17 years of expertise on the quality infrastructure system Metrology, standardization, accreditation, certification, inspection control and quality management (ISO 9001, ISO 17025, ISO 17020, ISO 15189) We also set up an effective risk management system within your company Integration of best practices, support for certification (ISO 14001, ISO 18001, ISO 31000, etc.)
-
-Nos Partenaires: Our Partners
-Des questions: Any Questions
-N'hésitez pas à nous contacter: Please do not hesitate to contact us
+translate.desc: Aequo Ltd est la réalisation de 17 années d'expertise sur le système d'infrastructure qualité Métrologie, normalisation, accréditation, certification, contrôle d'inspection et gestion de la qualité (ISO 9001, ISO 17025, ISO 17020, ISO 15189) Nous mettons également en place un système de gestion des risques efficace au sein de votre entreprise Intégration des meilleures pratiques, support à la certification (ISO 14001, ISO 18001, ISO 31000…)
+translate.partenaire: Nos Partenaires
+translate.question: Des questions
+translate.textquestion: N'hésitez pas à nous contacter
