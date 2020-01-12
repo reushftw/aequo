@@ -28,13 +28,7 @@
             <div class="title-news ">
                 <h2>Aequo Ltd,</h2>
                 <h5 style="color: #333; font-size:1.1em;">
-                    Aequo Ltd est la réalisation de 17 années d'expertise sur le système d'infrastructure qualité:
-
-                    Métrologie, normalisation, accréditation, certification, contrôle d'inspection et gestion de la qualité (ISO 9001, ISO 17025, ISO 17020, ISO 15189)
-
-                    Nous mettons également en place un système de gestion des risques efficace au sein de votre entreprise:
-
-                    Intégration des meilleures pratiques, support à la certification (ISO 14001, ISO 18001, ISO 31000…)
+                    {% trans %}Aequo Ltd est la réalisation de 17 années d'expertise sur le système d'infrastructure qualité Métrologie, normalisation, accréditation, certification, contrôle d'inspection et gestion de la qualité (ISO 9001, ISO 17025, ISO 17020, ISO 15189) Nous mettons également en place un système de gestion des risques efficace au sein de votre entreprise Intégration des meilleures pratiques, support à la certification (ISO 14001, ISO 18001, ISO 31000…){% endtrans %}
                 </h5>
             </div>
         </div>
@@ -43,7 +37,7 @@
     {#level 2#}
     <section style="background-color: #f7f6f7;">
         <div class="titles" >
-            <h1>À la une</h1>
+            <h1>{% trans%}À la une{% endtrans %}</h1>
         </div>
         <div class="container">
             <div class="card-deck row justify-content-center mt-30">
@@ -145,8 +139,8 @@
     <section style="background-color: #f7f6f7;" id="methodology">
         <div class=" bg-color">
             <div class="titles">
-                <h1>Our Methodology</h1>
-                <h4>insert some texte here if you need</h4>
+                <h1>{% trans %}Notre Méthodologie{% endtrans %}</h1>
+                <h4></h4>
             </div>
             <div class="row justify-content-around">
                 <img class="img-fluid metho-img" src="{{ asset('assets/images/methodology.png') }}" alt="">
@@ -158,7 +152,7 @@
     {#level 5#}
     <section>
             <div class="titles">
-                <h1>Nos Partenaires</h1>
+                <h1>{% trans %}Nos Partenaires{% endtrans %}</h1>
             </div>
         <div class="container partners" style="margin-top: 30px">
            <div class="row justify-content-around">
@@ -183,8 +177,8 @@
         <div class="container" >
             <div class="row justify-content-center" style="margin-top: 50px;">
                 <div class="titles">
-                    <h1>Des questions?</h1>
-                    <h4>N'hésitez pas à nous contacter</h4>
+                    <h1>{% trans %}Des questions{% endtrans %}?</h1>
+                    <h4>{% trans %}N'hésitez pas à nous contacter{% endtrans %}</h4>
                 </div>
             </div>
             {{ form_start(form) }}

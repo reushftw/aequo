@@ -26,10 +26,6 @@ class Message
      * @var string
      *
      * @Assert\NotBlank()
-     * @Assert\Regex(
-     *     pattern="/^[a-zA-Z]*$/",
-     *     message="Invalid",
-     *     )
      *
      * @ORM\Column(name="LastName", type="string", length=255)
      */
@@ -39,10 +35,6 @@ class Message
      * @var string
      *
      * @Assert\NotBlank()
-     * @Assert\Regex(
-     *     pattern="/^[a-zA-Z]*$/",
-     *     message="Invalid",
-     *     )
      *
      * @ORM\Column(name="FirstName", type="string", length=255)
      */
@@ -52,10 +44,6 @@ class Message
      * @var string
      *
      * @Assert\NotBlank()
-     * @Assert\Regex(
-     *     pattern="/^[a-zA-Z ]*$/",
-     *     message="Invalid",
-     * )
      *
      * @ORM\Column(name="fonction", type="string", length=255)
      */

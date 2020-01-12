@@ -11,11 +11,12 @@ body, html{
 }
 
 .nav-item-button {
-    border: 2px solid white;
+    border: 2px solid #3f48cc ;
     border-radius: 20px;
+
     background-color: white;
     width: 6em;
-    color:  #20204D !important;
+    color:  #3f48cc  !important;
     height: 40px;
     text-align: center;
 }
@@ -27,13 +28,15 @@ body, html{
 }
 
 .navbar {
-    background-color: #20204D;
+    background-color: white;
     padding: 15px !important;
 }
 
 .nav-link {
     font-weight: 700;
-    margin-left: 10px;
+    font-size: smaller;
+    margin-left: 20px;
+    color: #3f48cc !important;
 }
 
 .nav-link:hover {
@@ -63,12 +66,21 @@ body, html{
 }
 
 .custom-icon {
-    border: 2px solid white;
+    border: 2px solid #3f48cc ;
     border-radius: 30px;
     font-size: 1.1em !important;
     padding: 6px;
     margin-right: 8px;
-    color: white ;
+    color: #3f48cc  ;
+    text-decoration: none;
+}
+.custom-iconf {
+    border: 2px solid white ;
+    border-radius: 30px;
+    font-size: 1.1em !important;
+    padding: 6px;
+    margin-right: 8px;
+    color: white  ;
     text-decoration: none;
 }
 
