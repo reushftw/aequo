@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/fr", name="homepage_nl")
+     * @Route("/fr", name="homepage_nl", defaults={"_locale":"%locale%"})
      * @Route("/{_locale}/", name="homepage", requirements={"_locale" = "%app.locales%"}, defaults={"_locale":"%locale%"})
      */
     public function indexAction(Request $request)
